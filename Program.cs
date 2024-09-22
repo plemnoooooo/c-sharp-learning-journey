@@ -1,8 +1,7 @@
-﻿int counter = 10;
-
-do
+﻿for (int row = 1; row < 11; row++)
 {
-    Console.WriteLine(counter);
-    counter++;
+    for (char column = 'a'; column < 'k'; column++)
+    {
+        Console.WriteLine($"The cell is ({row}, {column})");
+    }
 }
-while (counter < 5);
