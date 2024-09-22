@@ -1,7 +1,9 @@
-﻿for (int row = 1; row < 11; row++)
+﻿var names = new List<string> { "Plemno", "Ana", "Felipe" };
+names.Add("David");
+names.Add("Damian");
+names.Add("Maria");
+
+foreach (var name in names)
 {
-    for (char column = 'a'; column < 'k'; column++)
-    {
-        Console.WriteLine($"The cell is ({row}, {column})");
-    }
+    Console.WriteLine($"Hello {name.ToUpper()}!");
 }
