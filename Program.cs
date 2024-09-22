@@ -1,10 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, Plemno!");
+﻿int a = 2100000000;
+int b = 2100000000;
+long c = checked(a + b);
 
-string firstFriend = "Maria";
-firstFriend = firstFriend.Trim();
-
-string secondFriend = "Scott";
-string friends = $"My friends are {firstFriend} and {secondFriend.Trim()}";
-
-Console.WriteLine(friends.StartsWith("My "));
+Console.WriteLine(c);
