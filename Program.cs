@@ -1,5 +1,14 @@
-﻿decimal a = 42.1M; // explicit type
-decimal b = 38.2M;
-decimal c = a + b;
+﻿int a = 5;
+int b = 3;
+int c = 4;
 
-Console.WriteLine($"The answer is {c}");
+if ((a + b + c > 10) || (a == b))
+{
+    Console.WriteLine("The answer is greater than 10");
+    Console.WriteLine("And the first number is equal to the second");
+}
+else
+{
+    Console.WriteLine("The answer is not greater than 10");
+    Console.WriteLine("Or the first number is not equal to the second");
+}
