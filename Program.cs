@@ -1,5 +1,5 @@
-﻿int a = 2100000000;
-int b = 2100000000;
-long c = checked(a + b);
+﻿decimal a = 42.1M; // explicit type
+decimal b = 38.2M;
+decimal c = a + b;
 
-Console.WriteLine(c);
+Console.WriteLine($"The answer is {c}");
