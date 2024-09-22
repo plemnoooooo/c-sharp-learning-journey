@@ -1,9 +1,10 @@
-﻿var names = new string[] { "Plemno", "Ana", "Felipe" };
-// names.Add("Damian") // LIST<T>
-names = [..names, "Damian"];
+﻿var numbers = new List<int> { 45, 56, 99, 48, 67, 78 };
+Console.WriteLine($"I found 99 at index {numbers.IndexOf(99)}");
 
-foreach (var name in names)
-{
-    Console.WriteLine($"Hello {name.ToUpper()}!");
-}
+numbers.Sort();
+Console.WriteLine($"I found 99 at index {numbers.IndexOf(99)}");
 
+// foreach (var number in numbers)
+// {
+//     Console.WriteLine($"{number}");
+// }
