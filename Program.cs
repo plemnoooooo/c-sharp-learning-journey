@@ -1,21 +1,14 @@
-﻿// Specify the data source.
-List<int> scores = [3, 45, 82, 97, 92, 100, 81, 60];
+﻿Console.WriteLine("hello oop");
 
-// Define the query expression.
-IEnumerable<int> scoreQuery =
-    from score in scores
-    where score > 80
-    orderby score descending
-    select score;
+var p1 = new Person("Plemno", "Puwell", new DateOnly(2005, 4, 9));
+var p2 = new Person("David", "Fowler", new DateOnly(1986, 1, 1));
 
-var scoreQuery2 = scores
-    .Where(s => s > 80)
-    .OrderByDescending(s => s);
+List<Person> persons = [p1, p2];
+Console.WriteLine(persons.Count());
 
-List<int> myScores = scoreQuery.ToList();
-foreach (var score in myScores)
+public class Person(string firstName, string lastName, DateOnly birthday)
 {
-    Console.WriteLine(score);
+    public string First { get; } = firstName;
+    public string Last { get; } = lastName;
+    public DateOnly Birthday { get; } = birthday;
 }
-
-// 97 92 81
