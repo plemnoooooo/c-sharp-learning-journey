@@ -2,18 +2,20 @@
 List<int> scores = [3, 45, 82, 97, 92, 100, 81, 60];
 
 // Define the query expression.
-IEnumerable<string> scoreQuery =
+IEnumerable<int> scoreQuery =
     from score in scores
     where score > 80
     orderby score descending
-    select $" The score is {score}";
+    select score;
 
-Console.WriteLine(scoreQuery.Count());
+var scoreQuery2 = scores
+    .Where(s => s > 80)
+    .OrderByDescending(s => s);
 
-// Execute the query.
-foreach (string s in scoreQuery)
+List<int> myScores = scoreQuery.ToList();
+foreach (var score in myScores)
 {
-    Console.WriteLine(s);
+    Console.WriteLine(score);
 }
 
-// Output: 97 92 81 
+// 97 92 81
